@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>OpenWeather</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngFor="let clima of climas">
+
+    <h1 class="text">{{clima.name}},{{clima.sys.country}}</h1>
+    <div class="text">
+      <ion-icon name="sunny-outline" color="warning"></ion-icon>
+      <h1>Actual : {{clima.main.temp}}</h1>
+    </div> 
+    
+    <div class="temp">
+      <p class="p1">Temperatura minima: {{clima.main.temp_min}}°</p>
+      <p class="p2">Temperatura Maxima: {{clima.main.temp_max}}°</p>
+      <p class="p3">Humedad: {{clima.main.humidity}}%</p>
+    </div>
+    
+  </div>  
+</ion-content>

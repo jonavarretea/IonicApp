@@ -1,0 +1,31 @@
+text {
+  text-align: center;
+  font-size: 60px;
+}
+
+
+
+.img {
+  vertical-align: middle;
+}
+
+.img {
+  transition: ease-out .2s;
+
+}
+
+img:hover {
+  transform: scale(0.5);
+  transition: 3s;
+
+
+}
+
+p {
+  color: rgb(73, 138, 255);
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  font-size: 40px;
+
+}

@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="screen"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+  <ion-card class="ion-card-bClima" [routerLink]="['/clima/']">
+
+    <ion-card-header>
+      <img src="/assets/clima-tipos.jpg" alt="Clima" class="card-img">
+      <ion-card-subtitle>Clima</ion-card-subtitle>
+      <ion-card-title>OpenWeather</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Si buscas conocer cual es el clima en la Ciudad, Esta app es perfecta para ti
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="ion-card-bRam" [routerLink]="['/userlist/']">
+    <ion-card-header>
+      <img src="/assets/rick-and-morty-rick.gif" alt="Clima" class="card-img">
+      <ion-card-subtitle>Series</ion-card-subtitle>
+      <ion-card-title>Rick and Morty API</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      Conoce a los personajes de esta serie animada
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="ion-card-bCrud" [routerLink]="['/form-computador/']">
+
+    <ion-card-header>
+      <img src="/src/assets/crud.png">
+      <ion-card-subtitle>Otros</ion-card-subtitle>
+      <ion-card-title>CRUD</ion-card-title>
+
+    </ion-card-header>
+    <ion-card-content>
+      Añada nuevos Computadores a tu lista
+    </ion-card-content>
+  </ion-card>
+</ion-content>

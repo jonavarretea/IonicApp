@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Formulario Computador</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-icon slot="end" name="laptop-outline" class="icon"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <form [formGroup]="mainForm" (ngSubmit)="capturarData()">
+      <ion-item>
+        <ion-label position="floating">Marca: </ion-label>
+        <ion-input formControlName="marca" type="text required"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Modelo: </ion-label>
+        <ion-input formControlName="modelo" type="text required"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Procesador</ion-label>
+        <ion-input formControlName="procesador" type="text required"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">RAM: </ion-label>
+        <ion-input formControlName="ram" type="text required"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Disco: </ion-label>
+        <ion-input formControlName="disco" type="text required"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Peso: </ion-label>
+        <ion-input formControlName="peso" type="text required"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Pantalla: </ion-label>
+        <ion-input formControlName="pantalla" type="text required"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Bateria: </ion-label>
+        <ion-input formControlName="bateria" type="text required"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Precio:</ion-label>
+        <ion-input formControlName="peso" type="text required"></ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="success" shape="full" expand="block">Agregar Computador</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+
+
+  <ion-list>
+    <ion-list-header>
+      Computadores
+    </ion-list-header>
+
+    <ion-item lines="inset" *ngFor="let computador of Data">
+      <ion-label>
+        <h5>{{computador.marca}}</h5>
+        <p>{{computador.modelo}}</p>
+        <p>{{computador.procesador}}</p>
+        <p>{{computador.ram}}</p>
+        <p>{{computador.disco}}</p>
+        <p>{{computador.peso}}</p>
+        <p>{{computador.pantalla}}</p>
+        <p>{{computador.bateria}}</p>
+        <p>{{computador.precio}}</p>
+      </ion-label>
+
+      <div>
+        <ion-icon name="create" style="zoom: 2.0;" [routerLink]="['/computador/', computador.id]"></ion-icon>
+        <ion-icon name="trash" (click)="deleteComputador(computador.id)"></ion-icon>
+      </div>
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>

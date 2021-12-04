@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Personaje</ion-title>
+
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="userlist"></ion-back-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+
+  <div *ngIf="character">
+    <ion-card >
+      <ion-card-content class="ion-text-center">
+        <img src="{{character.image}}">
+         <ion-card-subtitle>{{character.status}}</ion-card-subtitle>
+        <ion-card-title>{{character.name}}</ion-card-title>
+         <ion-card-content>
+            {{character.origin.name}}
+            --
+            {{character.location.name}}
+        </ion-card-content>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+
+</ion-content>

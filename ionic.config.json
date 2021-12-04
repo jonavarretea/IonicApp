@@ -1,7 +1,10 @@
 {
   "name": "ProyectoFinalv1",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
   },
   "type": "angular"
 }
